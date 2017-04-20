@@ -1,2 +1,3 @@
-# problems_geometric_flows_solitons
-Problems in Geometric Flows and Solitons
+# Problems in geometric flows and solitons
+
+Discussion of open problems in geometric flows and solitons.

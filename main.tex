@@ -20,8 +20,13 @@
 \newtheorem{Prop}{Proposition}[section] 
 
 \usepackage{epsfig,color}
- \usepackage{hyperref}
- 
+\usepackage{hyperref}
+
+\usepackage[style=authoryear,backend=biber]{biblatex}
+\bibliography{refs}
+\AtEveryBibitem{\clearfield{url}}
+\AtEveryBibitem{\clearfield{issn}}
+
 \begin{document}
 \maketitle
 \tableofcontents
@@ -69,85 +74,101 @@ For instance, use \textbf{Perelman 2002} to indicate his arXiv preprint \emph{Th
 \newpage 
 
 \section{Mean curvature flow}
+\begin{refsection}
 
 \begin{itemize}
 \item Estimation of the position of the extinction point -- see Bryant-Griffiths for a good discussion. Proved that there does not exist a formula from initial data, but a sharp estimate could be possible. An idea for this could be something related to the centre of mass.
 \end{itemize}
 
-\begin{Thm}[\cite{Gage Hamilton 1986}]
+\begin{Thm}[\cite{GageHamilton1986}]
 Under curve shortening flow, every simple closed convex curve in ${\mathbb{R}}^{2}$ remains convex and eventually becomes extinct in a round point.
 \end{Thm}
 
-\begin{Thm}[\cite{White 1995}]
+\begin{Thm}[\cite{White1995}]
 Let ${M}_{t}$ be a weak MCF in ${\mathbb{R}}^{2}$ that starts from a closed surface ${M}_{0}$ of genus $g_0$. Then at each time $t > 0$ where ${M}_{t}$ is smooth, the genus of  ${M}_{t}$ is at most $g_0$.
 \end{Thm}
 
-\begin{Thm}[\cite{Huisken 1984}]
+\begin{Thm}[\cite{Huisken1984}]
 Under MCF, every closed convex hypersurface in ${\mathbb{R}}^{n+1 \geq 3}$ remains convex and eventually becomes extinct in a round point.
 \end{Thm}
  
-\begin{Thm}[\cite{White 2000}]
+\begin{Thm}[\cite{White2000}]
 The singular set of a compact mean convex MCF in ${\mathbb{R}}^{n+1}$ has parabolic Hausdorff dimension at most $n-1$.
 \end{Thm}
 
-\begin{Thm}[\cite{Colding Minicozzi 2012}]
+\begin{Thm}[\cite{ColdingMinicozzi2012}]
 In ${\mathbb{R}}^{n+1}$ the round hypersphere ${\mathbb{S}}^{n}$ is the only closed smooth $F$-stable shrinker.
 \end{Thm}
 
-\begin{Thm}[\cite{Colding Ilmanen Minicozzi White 2013}] \label{Colding Ilmanen Minicozzi White 2013}
+\begin{Thm}[\cite{ColdingIlmanenMinicozziWhite2013}] \label{Colding Ilmanen Minicozzi White 2013}
 Given $n$, there exists  $\varepsilon = \varepsilon(n) > 0$ so that if $\Sigma \subset {\mathbb{R}}^{n+1}$
 is a closed shrinker not equal to the round hypersphere, then $\lambda\left(\Sigma\right) \geq \lambda\left({\mathbb{S}}^{n}\right) + \varepsilon$. Moreover,
 if $\lambda\left(\Sigma\right) \leq min \left\{  \lambda \left({\mathbb{S}}^{n-1}\right) , 3 \right\}$, then $\Sigma$ is diffeomorphic to ${\mathbb{S}}^{n}$.
 \end{Thm}
  
- \begin{Thm}[\cite{Bernstein Wang 2016}]
+ \begin{Thm}[\cite{BernsteinWang2016}]
 Theorem \ref{Colding Ilmanen Minicozzi White 2013} holds  with $\varepsilon = 0$ for any closed hypersurface.
 \end{Thm}
 
-\begin{Con}[\cite{Colding Minicozzi Pedersen 2015}] Theorem \ref{Colding Ilmanen Minicozzi White 2013} holds for any 
+\begin{Con}[\cite{ColdingMinicozziPedersen2015}] Theorem \ref{Colding Ilmanen Minicozzi White 2013} holds for any
 non-flat shrinker ${\Sigma}^{n}  \subset {\mathbb{R}}^{n+1}$ with $n \leq 6$.
 \end{Con}
 
-\begin{Thm}[\textbf{Rigidity of cylinders}, \cite{Colding Ilmanen Minicozzi 2015}]
+\begin{Thm}[\textbf{Rigidity of cylinders}, \cite{ColdingIlmanenMinicozzi2015}]
 If a singular point of an MCF is cylindrical, then for every tangent flow there is a multiplicity one cylinder. 
 \end{Thm}
 
-\begin{Con}[\cite{Colding Minicozzi Pedersen 2015}] Let ${M}_{t}$  be an MCF flow of smooth closed hypersurfaces in 
+\begin{Con}[\cite{ColdingMinicozziPedersen2015}] Let ${M}_{t}$  be an MCF flow of smooth closed hypersurfaces in
 ${\mathbb{R}}^{n+1}$. If the flow has a cylindrical singularity at time t0 and at the point $x_0 \in {\mathbb{R}}^{n+1}$, then in an 
 entire space-time neighborhood of $\left(x_0,t_0\right)$ the evolving hypersurfaces have positive mean curvature.
 \end{Con}
 
-\begin{Thm}[\textbf{Conical asymptotic rigidity}, \cite{Wang 2014}]
+\begin{Thm}[\textbf{Conical asymptotic rigidity}, \cite{Wang2014}]
 If ${\Sigma}_{1}$ and ${\Sigma}_{2}$ are shrinkers in ${\mathbb{R}}^{n+1} \ B_{R}$ that have boundary in $\partial B_{R}$ 
 and are asymptotic to the same cone, then they coincide.
 \end{Thm}
 
- \begin{Thm}[\cite{Colding Minicozzi 2015a}] Let ${M}_{t}$ be an MCF in ${\mathbb{R}}^{n+1}$. At each cylindrical singular 
+ \begin{Thm}[\cite{ColdingMinicozzi2015a}] Let ${M}_{t}$ be an MCF in ${\mathbb{R}}^{n+1}$. At each cylindrical singular
  point the tangent flow is unique. That is, any other tangent flow is also a cylinder with the same ${\mathbb{R}}^{k}$ factor 
  that points in the same direction.
 \end{Thm}
    
-\begin{Con}[\cite{Colding Minicozzi 2016}]  
+\begin{Con}[\cite{ColdingMinicozzi2016}]
   Let ${M}_{t}$ be an MCF of closed embedded hypersurfaces in ${\mathbb{R}}^{n+1}$ with only cylindrical singularities. Then 
   the space-time singular set has only finitely many components.
 \end{Con}
 
-\begin{Con}[\cite{Ilmanen 1995}]  
+\begin{Con}[\cite{Ilmanen1995}]
  Suppose that  ${M}_{0}  \subset {\mathbb{R}}^{n+1}$ is a smooth closed embedded hypersurface. A time-slice of any tangent flow of the MCF starting at 
   ${M}_{0}$ has a singular set of dimension at most $n-3$.
 \end{Con}
+
+\printbibliography[heading=subbibliography]
+\end{refsection}
 
 \newpage
 
 \section{Gauss curvature flow}
 
+\begin{refsection}
+
 \begin{itemize}
 \item The asymptotic shape of the `standard' Gauss curvature flows. There has been some recent progress on this, and some claim it is solved. A little controversial, but I think we can (and should) successfully clarify the issue.
 \end{itemize}
-  
+
+\printbibliography[heading=subbibliography]
+\end{refsection}
+
 \section{Inverse mean curvature flow}
 
+\begin{refsection}
+
+\printbibliography[heading=subbibliography]
+\end{refsection}
+
 \section{Willmore flow}
+
+\begin{refsection}
 
 \begin{itemize}
 \item Flow for surfaces with higher genus
@@ -155,9 +176,13 @@ and are asymptotic to the same cone, then they coincide.
 \item Finite-time singularities for the flow
 \item Weak solutions for the flow
 \end{itemize}
- 
+
+\printbibliography[heading=subbibliography]
+\end{refsection}
+
 \section{Applications of extrinsic geometric flows}
 
+\begin{refsection}
 Note: added extrinsic to the title, unless we wish to talk mostly about Ricci flow, Calabi flow, and the conformal flow of metrics.
 
 \begin{itemize}
@@ -167,121 +192,11 @@ Note: added extrinsic to the title, unless we wish to talk mostly about Ricci fl
 \item Entropy inequalities of Bernstein and co are a possibility?
 \end{itemize}
 
+\printbibliography[heading=subbibliography]
+\end{refsection}
+
 \section{List of symbols and abbreviations}
 
-
- \begin{thebibliography}{A}
-
-\bibitem[Andrews 2012]{Andrews 2012} 
-B. Andrews, {\emph{Noncollapsing in mean-convex mean curvature flow}}. 
-Geometry \& Topology, 16 (2012), No. 3, 1413--1418.
- 
-\bibitem[Bernstein Wang 2016]{Bernstein Wang 2016} 
-J. Bernstein and L. Wang, \emph{A sharp lower bound for the entropy of closed hypersurfaces up to dimension six}, 
-206 (2016), No. 3, 601--627.
-
-\bibitem[Brendle 2016]{Brendle 2016}
-S. Brendle, \emph{Embedded self-similar shrinkers of genus $0$}, Annals of Math. 183, 715--728 (2016).
-
-\bibitem[Calabi1958]{Calabi1958} 
-E. Calabi, \emph{An extension of E. Hopf's maximum principle with an application to Riemannian geometry}.
-Duke Math. J. 25 (1958), 45--56.
-
-\bibitem[Colding Minicozzi 2012]{Colding Minicozzi 2012}
-T. H. Colding and W. P. Minicozzi II,
-\emph{Generic mean curvature flow I; generic singularities},  Annals of Math., Volume 175 (2012), No. 2, 755--833.
-
-\bibitem[Colding Minicozzi 2015a]{Colding Minicozzi 2015a}
-T. H. Colding and W. P. Minicozzi II, \emph{Uniqueness of blowups and \L{}ojasiewicz inequalities}, Annals of Math., 182 (1) (2015), 221--285.
-
-\bibitem[Colding Minicozzi 2015b]{Colding Minicozzi 2015b}
-T.H. Colding and W.P. Minicozzi II, \emph{\L{}ojasiewicz inequalities and applications}, Surveys in Differential Geometry, Vol. 19
-Regularity and evolution of nonlinear equations
-Essays dedicated to Richard Hamilton, Leon Simon, and Karen Uhlenbeck, International Press (2015), 63--82.
-
-\bibitem[Colding Minicozzi 2016]{Colding Minicozzi 2016}
-Tobias Holck Colding, and William P. Minicozzi II, \emph{The singular set of mean curvature flow with generic singularities}, 
-Inventiones Math., 204 (2) (2016), 443--471.
- 
- \bibitem[Colding Ilmanen Minicozzi 2015]{Colding Ilmanen Minicozzi 2015}
-  T. H. Colding, T. Ilmanen, and W. P. Minicozzi II, {\emph{Rigidity of generic singularities of mean curvature flow}}, 
- Publications math\'{e}matiques de l'IH\'{E}S,  121 (2015), No. 1, 363--382.
- 
- 
-\bibitem[Colding Minicozzi Pedersen 2015]{Colding Minicozzi Pedersen 2015}
-T.H. Colding, W.P. Minicozzi II and E.K. Pedersen, {\emph{Mean curvature flow}}, Bulletin of the AMS, 52 (2015), No. 2, 297--333.
-
-
-\bibitem[Colding Ilmanen Minicozzi White 2013]{Colding Ilmanen Minicozzi White 2013} 
-Tobias Holck Colding, Tom Ilmanen, William P. Minicozzi II, and Brian White, 
-{\emph{The round sphere minimizes entropy among closed self-shrinkers}}, J. Differential Geom. 95 (2013), No. 1, 53--69. 
- 
-\bibitem[Evans  Spruck 1991]{Evans  Spruck 1991} 
-L. C. Evans and J. Spruck, \emph{Motion of level sets by mean curvature I}, J. Differential Geom.  33 (1991) 635--681.
-
-\bibitem[Evans  Spruck 1992a]{Evans  Spruck 1992a} 
-L. C. Evans and J. Spruck, 
-\emph{Motion of level sets by mean curvature II}. Trans. Amer. Math. Soc. 330 (1992), No. 1, 321--332. 
-
-\bibitem[Evans  Spruck 1992b]{Evans  Spruck 1992b} 
-L.C. Evans and J. Spruck, 
-\emph{Motion of level sets by mean curvature. III}. 
-J. Geom. Anal. 2 (1992), No. 2, 121--150. 
-
-\bibitem[Evans  Spruck 1995]{Evans  Spruck 1995} 
-L.C. Evans and J. Spruck, 
-\emph{Motion of level sets by mean curvature. IV}. J. Geom. Anal. 5 (1995), No. 1, 77--114. 
-
-\bibitem[Gage Hamilton 1986]{Gage Hamilton 1986}
-M. Gage and R. S. Hamilton, \emph{The heat equation shrinking convex plane curves}, J. Differential Geom. 
-23 (1986), No. 1, 69--96.
-
-\bibitem[Grayson 1989]{Grayson 1989}
-M. Grayson,  \emph{Shortening embedded curves},  Ann. of Math. (2) 129 (1989), No. 1, 71--111. 
-
-\bibitem[Huisken 1984]{Huisken 1984}
-G. Huisken, Flow by mean curvature of convex surfaces into spheres, J. Differential Geom. 20 (1984), no. 1, 237--266.  
-
-\bibitem[Huisken 1990]{Huisken 1990}
-G. Huisken, \emph{Asymptotic behavior for singularities of the mean curvature flow}. J. Differential
-Geom. 31 (1990), no. 1, 285--299.
-
-\bibitem[Huisken 1993]{Huisken 1993} 
-G. Huisken, \emph{Local and global behaviour of hypersurfaces moving by mean curvature}. Differential geometry:
-partial differential equations on manifolds (Los Angeles, CA, 1990), 175Ã191, Proc. Sympos. Pure Math.,
-54, Part 1, Amer. Math. Soc., Providence, RI, 1993.
-
-\bibitem[Huisken Sinestrari 1999a]{Huisken Sinestrari 1999a}
-G. Huisken and C. Sinestrari, 
-\emph{Mean curvature flow singularities for mean convex surfaces}, 
-Calc. Var. Partial Differential Equations, 8 (1999), 1--14.
-
-\bibitem[Huisken Sinestrari 1999b]{Huisken Sinestrari 1999b}
-G. Huisken and C. Sinestrari, 
-{\emph{Convexity estimates for mean curvature flow and singularities of mean convex surfaces}},
- Acta Math. 183 (1999), no. 1, 45--70.
- 
- \bibitem[Ilmanen 1995]{Ilmanen 1995}
- T. Ilmanen,  {\emph{Singularities of Mean Curvature Flow of Surfaces}}, preprint, 1995.
-
-\bibitem[Wang 2014]{Wang 2014} 
- Lu Wang, {\emph{Uniqueness of self-similar shrinkers with asymptotically conical ends}}, J. Amer. Math. Soc. 27 (2014), no. 3, 613--638,
- 
-  
-\bibitem[White 1995]{White 1995} 
-B. White, \emph{The topology of hypersurfaces moving by mean curvature}, Comm. Anal.
-Geom. 3 (1995), no. 1-2, 317--333.
-
-\bibitem[White 2000]{White 2000} 
-B. White, \emph{The size of the singular set in mean curvature flow of mean-convex sets}. 
-J. Amer. Math. Soc. 13 (2000), no. 3, 665--695.
-
-\bibitem[White 2003]{White 2003} 
-B. White, \emph{The nature of singularities in mean curvature flow of mean-convex sets}.
-J. Amer. Math. Soc. 16 (2003), no. 1, 123--138.
-
-
-\end{thebibliography}
 
 \end{document}
 
